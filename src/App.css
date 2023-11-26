@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    user-select: none;
+    background: rgb(35, 12, 119);
+}
+
+.main--main {
+    display: flex;
+    padding: 75px 75px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(35, 12, 119);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.main--div {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    padding: 30px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: radial-gradient(circle at top left, rgb(45, 144, 206) 5%, transparent 35%),
+                radial-gradient(circle at top right, rgb(45, 144, 206) 5%, transparent 35%),
+                radial-gradient(circle at bottom left, rgb(45, 144, 206) 5%, transparent 35%),
+                radial-gradient(circle at bottom right, rgb(45, 144, 206) 5%, transparent 35%);
+    animation: gradientAnimation 1s linear infinite; /* Adjust the duration and timing function as needed */
+    background-size: 50% 50%;
+}
+
+
+.game--board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    padding: 33.28px 34.56px 33.92px 34.56px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgb(215, 224, 85);
+
+    /* border: 2px solid red; */
+}
+
+.game--board--text > h2{
+    color: #2B283A;
+    text-align: center;
+    font-family: "Bebas Neue", "sans-serif";
+    font-size: 40px;
+    /* letter-spacing: 1px; */
+    margin: 0;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.game--board--text--instruction{
+    width: 232.96px;
+    flex-shrink: 0;
+    color: #333550;
+    text-align: center;
+    font-family: Inter, "sans-serif";
+    font-size: 13.107px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.393px;
+    
+    margin: 0 0 20px 0;
+}
+
+.game--board--button--container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns with equal width */
+    gap: 17px;
+    margin-bottom: 15px;
+
+    /* border: 2px solid red; */
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    width: 35.84px;
+    height: 35.84px;
+    flex-shrink: 0;
+    border-radius: 3.813px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+    
+    color: #2B283A;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 20.589px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.roll--btn {
+    width: 92.16px;
+    height: 35.84px;
+    flex-shrink: 0;
+    background-color: #5035FF;
+    
+    color: white;
+    text-align: center;
+    font-family: Karla;
+    font-size: 16.384px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: space-evenly;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.dice:not(:last-child) {
+    margin-right: 10px;
+}
+
+.score--board {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.elapsed--time {
+    color: white;
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+}
+
+.score {
+    color: white;
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+}
